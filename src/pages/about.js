@@ -2,16 +2,31 @@ import React from "react"
 import Layout from "../components/Layout"
 import PageBanner from "../components/PageBanner"
 import brushImg from "../assets/brush-line.png"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import SEO from "../components/SEO"
 
-const About = ({
-  data: {
-    allStrapiAbout: { nodes },
-  },
-}) => {
-  const { title, stack, image, info } = nodes[0]
+const About = ({ data }) => {
+  const {
+    file: {
+      childImageSharp: { fluid },
+    },
+  } = useStaticQuery(query)
+  // const {
+  //   allStrapiAbout: { nodes },
+  // } = data
+  // const { title, stack, image, info } = nodes[0]
+
+  const title = "About Me"
+  const stack = [
+    // {
+    //   id: "1",
+    //   title: "Node.js",
+    // },
+  ]
+  const info = `
+  Wiwie Sanjaya is a backend developer with over 4 years of experience in server-side logic, performance optimization, and system integration. He is proficient in JavaScript, TypeScript, and Python, with expertise in frameworks like Node.js and Express.js. Wiwie also has experience with databases (MongoDB, MySQL, Redis), architectural patterns (MVC, DDD), and testing tools (Jest, Supertest). While his primary focus is backend development, he has also pursued online courses in AI and Machine Learning using tools like Pandas, NumPy, and PyTorch to expand his skill set. Dedicated to building clean, scalable applications, Wiwie follows best practices and stays current with latest technologies.
+  `
 
   return (
     <Layout active="about">
@@ -22,7 +37,7 @@ const About = ({
           <div className="row align-items-center">
             <div className="col-12 col-md-6">
               <Image
-                fluid={image.childImageSharp.fluid}
+                fluid={fluid}
                 className="img-fluid"
                 alt="my profile pricture"
               />
@@ -48,26 +63,38 @@ const About = ({
   )
 }
 
-export const query = graphql`
+const query = graphql`
   {
-    allStrapiAbout {
-      nodes {
-        stack {
-          id
-          title
-        }
-        title
-        info
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
+    file(relativePath: { eq: "wiwie.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
   }
 `
+
+// export const query = graphql`
+//   {
+//     allStrapiAbout {
+//       nodes {
+//         stack {
+//           id
+//           title
+//         }
+//         title
+//         info
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default About

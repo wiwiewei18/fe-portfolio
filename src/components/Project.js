@@ -7,8 +7,13 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
   return (
     <div className="project-card mt-4 mb-4">
       {image ? (
-        <Image
-          fluid={image.childImageSharp.fluid}
+        // <Image
+        //   fluid={projectImage[id]}
+        //   className="img-fluid"
+        //   alt="project image"
+        // />
+        <img
+          src={require(`../assets/${image}`)}
           className="img-fluid"
           alt="project image"
         />

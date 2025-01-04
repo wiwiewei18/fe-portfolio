@@ -1,16 +1,11 @@
 import React from "react"
-import {
-  FaWhatsappSquare,
-  FaGithubSquare,
-  FaInstagramSquare,
-} from "react-icons/fa"
+import { FaWhatsappSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa"
 
 const data = [
   {
     id: 1,
-    icon: <FaWhatsappSquare className="social-icon"></FaWhatsappSquare>,
-    url:
-      "https://api.whatsapp.com/send?phone=62895615540299&text=Hello%20Wiwie%20Sanjaya",
+    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
+    url: "https://www.linkedin.com/in/wiwie-sanjaya/",
   },
   {
     id: 2,
@@ -19,8 +14,9 @@ const data = [
   },
   {
     id: 3,
-    icon: <FaInstagramSquare className="social-icon"></FaInstagramSquare>,
-    url: "https://www.instagram.com/wwwei180300/",
+    icon: <FaWhatsappSquare className="social-icon"></FaWhatsappSquare>,
+    url:
+      "https://api.whatsapp.com/send?phone=62895337376606&text=Hello%20Wiwie%20Sanjaya",
   },
 ]
 const links = data.map(link => {

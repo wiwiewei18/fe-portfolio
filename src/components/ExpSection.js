@@ -2,31 +2,33 @@ import React from "react"
 import image from "../assets/circle.png"
 import { Link } from "gatsby"
 import { AiOutlineCheck } from "react-icons/ai"
-import { graphql, useStaticQuery } from "gatsby"
+import { jobs } from "../constants/jobs.js"
 
-const query = graphql`
-  {
-    allStrapiJobs(sort: { fields: strapiId, order: DESC }) {
-      nodes {
-        strapiId
-        company
-        date
-        position
-        desc {
-          id
-          name
-        }
-      }
-    }
-  }
-`
+// const query = graphql`
+//   {
+//     allStrapiJobs(sort: { fields: strapiId, order: DESC }) {
+//       nodes {
+//         strapiId
+//         company
+//         date
+//         position
+//         desc {
+//           id
+//           name
+//         }
+//       }
+//     }
+//   }
+// `
 
 const ExpSection = () => {
-  const data = useStaticQuery(query)
-  const {
-    allStrapiJobs: { nodes: jobs },
-  } = data
+  // const data = useStaticQuery(query)
+  // const {
+  //   allStrapiJobs: { nodes: jobs },
+  // } = data
   const [value, setValue] = React.useState(0)
+  // const { company, position, date, desc } = jobs[value]
+
   const { company, position, date, desc } = jobs[value]
 
   return (

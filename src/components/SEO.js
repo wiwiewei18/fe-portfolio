@@ -2,30 +2,37 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const query = graphql`
-  {
-    site {
-      siteMetadata {
-        author
-        siteDesc: description
-        image
-        siteUrl
-        siteTitle: title
-        twitterUsername
-      }
-    }
-  }
-`
+// const query = graphql`
+//   {
+//     site {
+//       siteMetadata {
+//         author
+//         siteDesc: description
+//         image
+//         siteUrl
+//         siteTitle: title
+//         twitterUsername
+//       }
+//     }
+//   }
+// `
 
 const SEO = ({ title, description }) => {
-  const { site } = useStaticQuery(query)
-  const {
-    siteDesc,
-    siteTitle,
-    siteUrl,
-    image,
-    twitterUsername,
-  } = site.siteMetadata
+  // const { site } = useStaticQuery(query)
+  // const {
+  //   siteDesc,
+  //   siteTitle,
+  //   siteUrl,
+  //   image,
+  //   twitterUsername,
+  // } = site.siteMetadata
+
+  const siteDesc = "Wiwie Sanjaya Portfolio Site"
+  const siteTitle = "Wiwie Sanjaya Portfolio"
+  const siteUrl = "https://testing-strapi-gatsby-build.netlify.app"
+  const image = "/twitter-img.png"
+  const twitterUsername = "@wiwiesanjaya"
+
   return (
     <Helmet title={`${title} | ${siteTitle}`} htmlAttributes={{ lang: "en" }}>
       <meta name="description" content={description || siteDesc} />

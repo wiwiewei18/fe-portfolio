@@ -31,12 +31,16 @@ const HomeBanner = () => {
             <Image
               fluid={fluid}
               className="hero-img"
-              alt="my profile pricture"
+              alt="my profile picture"
             />
           </div>
           <div className="col-12 col-md-6">
-            <h1>I'm Wiwie</h1>
-            <h4>MERN Stack Developer</h4>
+            <h1>Wiwie Sanjaya</h1>
+            <h4 className="text-justify">
+              Node.js Developer at Grip Principle Pte. Ltd. | 4 Years of
+              Expertise in Scalable Application Development | AI Learner at
+              Ruangguru's Skill Academy
+            </h4>
             <Link type="button" to="/contact/" className="btn btn-primary my-3">
               Contact Me
             </Link>

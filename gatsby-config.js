@@ -25,18 +25,18 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: `https://wiwie-portfolio-api.herokuapp.com`,
-        queryLimit: 1000, // Default to 100
-        //   contentTypes : `jobs`, `projects`, `blogs`,
-        //   singleType : `about`
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [`jobs`, `projects`],
-        singleTypes: [`about`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: `https://wiwie-portfolio-api.herokuapp.com`,
+    //     queryLimit: 1000, // Default to 100
+    //     //   contentTypes : `jobs`, `projects`, `blogs`,
+    //     //   singleType : `about`
+    //     //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
+    //     contentTypes: [`jobs`, `projects`],
+    //     singleTypes: [`about`],
+    //   },
+    // },
     // {
     //   resolve: `gatsby-plugin-webfonts`,
     //   options: {

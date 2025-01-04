@@ -4,12 +4,13 @@ import PageBanner from "../components/PageBanner"
 import { graphql } from "gatsby"
 import ProjectSection from "../components/ProjectSection"
 import SEO from "../components/SEO"
+import { projects } from "../constants/projects"
 
-const ProjectsPage = ({
-  data: {
-    allStrapiProjects: { nodes: projects },
-  },
-}) => {
+const ProjectsPage = ({ data }) => {
+  // const {
+  //   allStrapiProjects: { nodes: projects },
+  // } = data
+
   return (
     <Layout active="projects">
       <SEO title="Projects" description="Projects page of this website" />
@@ -19,29 +20,29 @@ const ProjectsPage = ({
   )
 }
 
-export const query = graphql`
-  {
-    allStrapiProjects {
-      nodes {
-        github
-        id
-        description
-        title
-        url
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        stack {
-          id
-          title
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     allStrapiProjects {
+//       nodes {
+//         github
+//         id
+//         description
+//         title
+//         url
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//         stack {
+//           id
+//           title
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default ProjectsPage
