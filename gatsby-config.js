@@ -52,5 +52,5 @@ module.exports = {
     //   },
     // },
   ],
-  pathPrefix: "/fe-portfolio",
+  pathPrefix: "/",
 }
