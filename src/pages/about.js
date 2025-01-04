@@ -18,12 +18,71 @@ const About = ({ data }) => {
   // const { title, stack, image, info } = nodes[0]
 
   const title = "About Me"
-  const stack = [
-    // {
-    //   id: "1",
-    //   title: "Node.js",
-    // },
+  const stackBE = [
+    {
+      id: "1",
+      title: "Nest.js",
+    },
+    {
+      id: "2",
+      title: "Express",
+    },
+    {
+      id: "3",
+      title: "Microservices",
+    },
+    {
+      id: "4",
+      title: "Databases",
+    },
+    {
+      id: "5",
+      title: "Unit Testing & Integration Testing",
+    },
+    {
+      id: "6",
+      title: "Docker",
+    },
+    {
+      id: "7",
+      title: "Design Pattern",
+    },
+    {
+      id: "8",
+      title: "Git",
+    },
   ]
+  const stackAI = [
+    {
+      id: "1",
+      title: "Data Science",
+    },
+    {
+      id: "2",
+      title: "Data Visualization",
+    },
+    {
+      id: "3",
+      title: "Machine Learning",
+    },
+    {
+      id: "4",
+      title: "Deep Learning",
+    },
+    {
+      id: "5",
+      title: "Computer Vision",
+    },
+    {
+      id: "6",
+      title: "Transfer Learning",
+    },
+    {
+      id: "7",
+      title: "LangChain",
+    },
+  ]
+
   const info = `
   Wiwie Sanjaya is a backend developer with over 4 years of experience in server-side logic, performance optimization, and system integration. He is proficient in JavaScript, TypeScript, and Python, with expertise in frameworks like Node.js and Express.js. Wiwie also has experience with databases (MongoDB, MySQL, Redis), architectural patterns (MVC, DDD), and testing tools (Jest, Supertest). While his primary focus is backend development, he has also pursued online courses in AI and Machine Learning using tools like Pandas, NumPy, and PyTorch to expand his skill set. Dedicated to building clean, scalable applications, Wiwie follows best practices and stays current with latest technologies.
   `
@@ -48,7 +107,18 @@ const About = ({ data }) => {
                 <img src={brushImg} className="img-fluid" alt="brush line" />
               </div>
               <p className="text-justify">{info}</p>
-              {stack.map(item => {
+              <strong className="d-block">Backend Skill Set</strong>
+              {stackBE.map(item => {
+                return (
+                  <span key={item.id} className="stack">
+                    {item.title}
+                  </span>
+                )
+              })}
+              <strong className="d-block mt-4">
+                Artificial Intelligence Skill Set
+              </strong>
+              {stackAI.map(item => {
                 return (
                   <span key={item.id} className="stack">
                     {item.title}

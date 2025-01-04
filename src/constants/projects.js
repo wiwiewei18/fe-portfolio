@@ -15,6 +15,22 @@ export const projects = [
         id: "2",
         title: "@nestjs/microservices",
       },
+      {
+        id: "3",
+        title: "Mongoose",
+      },
+      {
+        id: "4",
+        title: "Docker",
+      },
+      {
+        id: "5",
+        title: "Stripe",
+      },
+      {
+        id: "6",
+        title: "Nodemailer",
+      },
     ],
     featured: true,
     image: "microservice-hotel-reservation.png",

@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import HomeBanner from "../components/HomeBanner"
 import ExpSection from "../components/ExpSection"

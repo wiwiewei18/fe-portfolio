@@ -1,7 +1,7 @@
 import React from "react"
 import image from "../assets/circle.png"
 import { Link } from "gatsby"
-import { AiOutlineCheck } from "react-icons/ai"
+import { FaCircle } from "react-icons/fa"
 import { jobs } from "../constants/jobs.js"
 
 // const query = graphql`
@@ -68,11 +68,10 @@ const ExpSection = () => {
                 <h3>{position}</h3>
                 <h5>{company}</h5>
                 <p>{date}</p>
-                <ul>
+                <ul style={{ listStyleType: "disc" }} className="ml-4">
                   {desc.map(item => {
                     return (
                       <li key={item.id}>
-                        <AiOutlineCheck className="mr-2" />
                         <span>{item.name}</span>
                       </li>
                     )
@@ -82,11 +81,11 @@ const ExpSection = () => {
             </div>
           </div>
         </div>
-        <div className="text-center mt-3">
+        {/* <div className="text-center mt-3">
           <Link to="/about/" className="btn btn-primary">
             see more
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   )

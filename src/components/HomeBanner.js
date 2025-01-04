@@ -36,10 +36,9 @@ const HomeBanner = () => {
           </div>
           <div className="col-12 col-md-6">
             <h1>Wiwie Sanjaya</h1>
-            <h4 className="text-justify">
-              Node.js Developer at Grip Principle Pte. Ltd. | 4 Years of
-              Expertise in Scalable Application Development | AI Learner at
-              Ruangguru's Skill Academy
+            <h4>
+              4 Years of Expertise in Scalable Application Development | AI
+              Enthusiast
             </h4>
             <Link type="button" to="/contact/" className="btn btn-primary my-3">
               Contact Me

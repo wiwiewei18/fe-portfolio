@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
 import PageBanner from "../components/PageBanner"
-import { graphql } from "gatsby"
 import ProjectSection from "../components/ProjectSection"
 import SEO from "../components/SEO"
 import { projects } from "../constants/projects"

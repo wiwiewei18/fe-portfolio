@@ -1,7 +1,5 @@
 import React from "react"
-import Image from "gatsby-image"
-import PropTypes from "prop-types"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import { SiGithub, SiPostman } from "react-icons/si"
 
 const Project = ({ description, title, github, stack, url, image, index }) => {
   return (
@@ -36,7 +34,7 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
             {github !== "-" ? (
               <span className="icon">
                 <a href={github} className="link">
-                  <FaGithubSquare />
+                  <SiGithub />
                 </a>
               </span>
             ) : (
@@ -45,7 +43,7 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
             {url !== "-" ? (
               <span className="icon">
                 <a href={url} className="link">
-                  <FaShareSquare />
+                  <SiPostman />
                 </a>
               </span>
             ) : (

@@ -100,16 +100,24 @@ span.stack {
 }
 .project-card .project-desc .icons {
   margin-top: 1rem;
+  display: flex;
 }
 .project-card .project-desc span.icon {
   margin-right: 0.5rem;
 }
 .project-card .project-desc span.icon .link {
-  color: #be0029;
-  font-size: 1.5rem;
+  color: #fff;
+  background-color: #be0029;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .project-card .project-desc span.icon .link:hover {
-  color: #8d0120;
+  background-color: #8d0120;
 }
 /* projects section end */
 
